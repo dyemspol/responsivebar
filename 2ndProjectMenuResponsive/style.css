@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav {
+  width: 100%;
+  padding: 0px 5%;
+  height: 70px;
+  background-color: rgb(130, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.4rem;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  li {
+    font-size: 1.2rem;
+  }
+}
+
+.bar-menu {
+  display: none;
+}
+#check {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .bar-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    right: 0;
+    left: 0;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(130, 0, 0);
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+  }
+  #check:checked ~ .menu {
+    height: 90vh;
+  }
+  .menu li {
+    padding: 20px 0px;
+  }
+}
